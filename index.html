@@ -22,165 +22,180 @@
     });
   </script>
 </head>
-<!-- Apply a vertical gradient as the page background -->
-<body class="text-gray-800" style="background: linear-gradient(to bottom, #2D7D89, #67C2D1);">
-  <!-- Barra de navegación fija -->
-  <nav class="fixed top-0 left-0 right-0 bg-white shadow z-50">
+<body class="text-gray-800" style="background: linear-gradient(to bottom, #f5f5f5 0%, #f5f5f5 80%, #2D7D89 80%, #2D7D89 100%);">
+  <!-- Barra de navegación con degradado -->
+  <nav class="fixed top-0 left-0 right-0 shadow z-50" style="background: linear-gradient(to right, #2D7D89, #67C2D1);">
     <div class="container mx-auto px-4 py-4 flex items-center justify-between">
       <!-- Logo e imagotipo a la izquierda -->
       <a href="#" class="flex items-center space-x-2">
         <img src="avokes-imagotipo.png" alt="AVOKES logo" class="h-12 w-12 sm:h-16 sm:w-16">
-        <span class="font-bold text-lg sm:text-2xl text-gray-800">AVOKES</span>
+        <span class="font-bold text-lg sm:text-2xl text-white">AVOKES</span>
       </a>
       <!-- Enlaces de navegación -->
       <div class="flex space-x-4 md:space-x-6 text-sm md:text-base">
-        <a href="#nosotros" class="text-gray-800 hover:text-blue-600">Nosotros</a>
-        <a href="#viaja" class="text-gray-800 hover:text-blue-600">Viaja</a>
-        <a href="#blog" class="text-gray-800 hover:text-blue-600">Blog</a>
-        <a href="#ecommerce" class="text-gray-800 hover:text-blue-600">E-commerce</a>
+        <a href="#nosotros" class="text-white hover:text-yellow-300">Nosotros</a>
+        <a href="#viaja" class="text-white hover:text-yellow-300">Viaja</a>
+        <a href="#blog" class="text-white hover:text-yellow-300">Blog</a>
+        <a href="#ecommerce" class="text-white hover:text-yellow-300">E-commerce</a>
       </div>
     </div>
   </nav>
 
-  <!-- Añadir relleno superior para compensar la barra fija -->
+  <!-- Relleno superior para compensar la barra fija -->
   <div class="pt-24"></div>
 
-  <!-- Sección del carrusel de imágenes con enlaces -->
-  <section class="mb-12">
-    <div class="relative w-full h-64 overflow-hidden">
-      <div id="carousel-track" class="flex transition-transform duration-700 ease-in-out h-full">
-        <div class="w-full flex-shrink-0">
-          <a href="#"><img src="carousel1.png" alt="Buque de carga 1" class="w-full h-64 object-cover"></a>
-        </div>
-        <div class="w-full flex-shrink-0">
-          <a href="#"><img src="carousel2.png" alt="Buque de carga 2" class="w-full h-64 object-cover"></a>
-        </div>
-        <div class="w-full flex-shrink-0">
-          <a href="#"><img src="carousel3.png" alt="Buque de carga 3" class="w-full h-64 object-cover"></a>
+  <!-- Sección del hero -->
+  <section id="inicio" class="py-12">
+    <div class="container mx-auto px-4">
+      <div class="p-6 rounded-[15px]" style="background: linear-gradient(to right, #F8B03B 10%, #ffffff 10%);">
+        <h1 class="text-4xl md:text-5xl font-bold mb-4">AVOKES</h1>
+        <p class="text-lg md:text-xl text-gray-600 mb-6">Ten control de tus proveedores en Asia</p>
+        <div class="flex justify-center gap-4">
+          <a href="https://wa.me/CTA_WHATSAPP" class="bg-green-500 text-white px-6 py-3 rounded-lg shadow hover:bg-green-600">WhatsApp</a>
+          <a href="mailto:CTA_EMAIL" class="bg-blue-500 text-white px-6 py-3 rounded-lg shadow hover:bg-blue-600">Contáctanos</a>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Hero principal con nombre de la empresa y tagline -->
-  <header class="bg-white py-12" id="inicio">
-    <div class="container mx-auto px-4 text-center">
-      <h1 class="text-4xl md:text-5xl font-bold mb-4">AVOKES</h1>
-      <p class="text-lg md:text-xl text-gray-600 mb-6">Ten control de tus proveedores en Asia</p>
-      <div class="flex justify-center gap-4">
-        <a href="https://wa.me/CTA_WHATSAPP" class="bg-green-500 text-white px-6 py-3 rounded-lg shadow hover:bg-green-600">WhatsApp</a>
-        <a href="mailto:CTA_EMAIL" class="bg-blue-500 text-white px-6 py-3 rounded-lg shadow hover:bg-blue-600">Contáctanos</a>
+  <!-- Sección del carrusel de imágenes con enlaces -->
+  <section id="viaja" class="pb-12">
+    <div class="container mx-auto px-4">
+      <div class="p-6 rounded-[15px]" style="background: linear-gradient(to right, #F8B03B 10%, #ffffff 10%);">
+        <div class="relative w-full h-64 overflow-hidden rounded-lg">
+          <div id="carousel-track" class="flex transition-transform duration-700 ease-in-out h-full">
+            <div class="w-full flex-shrink-0">
+              <a href="#"><img src="carousel1.png" alt="Buque de carga 1" class="w-full h-64 object-cover rounded-lg"></a>
+            </div>
+            <div class="w-full flex-shrink-0">
+              <a href="#"><img src="carousel2.png" alt="Buque de carga 2" class="w-full h-64 object-cover rounded-lg"></a>
+            </div>
+            <div class="w-full flex-shrink-0">
+              <a href="#"><img src="carousel3.png" alt="Buque de carga 3" class="w-full h-64 object-cover rounded-lg"></a>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
-  </header>
+  </section>
 
   <!-- Sección de servicios -->
-  <section class="py-12 bg-gray-100" id="servicios">
+  <section id="servicios" class="py-12">
     <div class="container mx-auto px-4">
-      <h2 class="text-3xl font-bold text-center mb-8">Nuestros Servicios</h2>
-      <div class="grid md:grid-cols-3 gap-8">
-        <!-- Tarjeta Importación -->
-        <div class="bg-white p-6 rounded-lg shadow text-center">
-          <img src="icon-importacion_small2.png" alt="Icono Importación" class="w-16 h-16 mx-auto mb-4">
-          <h3 class="text-xl font-semibold mb-2">Importación</h3>
-          <p>Gestionamos todo el proceso de importación, desde la búsqueda de proveedores hasta la logística de envío, asegurando calidad y cumplimiento.</p>
-        </div>
-        <!-- Tarjeta Sourcing -->
-        <div class="bg-white p-6 rounded-lg shadow text-center">
-          <img src="icon-sourcing_small2.png" alt="Icono Sourcing" class="w-16 h-16 mx-auto mb-4">
-          <h3 class="text-xl font-semibold mb-2">Sourcing</h3>
-          <p>Encontramos los mejores fabricantes en China para tu negocio en México, negociando condiciones óptimas y supervisando la producción.</p>
-        </div>
-        <!-- Tarjeta Logística -->
-        <div class="bg-white p-6 rounded-lg shadow text-center">
-          <img src="icon-logistica_small2.png" alt="Icono Logística" class="w-16 h-16 mx-auto mb-4">
-          <h3 class="text-xl font-semibold mb-2">Logística</h3>
-          <p>Coordinamos transporte, aduanas y entrega final con transparencia y eficiencia, reduciendo costos y tiempos.</p>
+      <div class="p-6 rounded-[15px]" style="background: linear-gradient(to right, #F8B03B 10%, #ffffff 10%);">
+        <h2 class="text-3xl font-bold text-center mb-8">Nuestros Servicios</h2>
+        <div class="grid md:grid-cols-3 gap-8">
+          <!-- Tarjeta Importación -->
+          <div class="bg-white p-6 rounded-[15px] shadow text-center">
+            <img src="icon-importacion_small2.png" alt="Icono Importación" class="w-16 h-16 mx-auto mb-4">
+            <h3 class="text-xl font-semibold mb-2">Importación</h3>
+            <p>Gestionamos todo el proceso de importación, desde la búsqueda de proveedores hasta la logística de envío, asegurando calidad y cumplimiento.</p>
+          </div>
+          <!-- Tarjeta Sourcing -->
+          <div class="bg-white p-6 rounded-[15px] shadow text-center">
+            <img src="icon-sourcing_small2.png" alt="Icono Sourcing" class="w-16 h-16 mx-auto mb-4">
+            <h3 class="text-xl font-semibold mb-2">Sourcing</h3>
+            <p>Encontramos los mejores fabricantes en China para tu negocio en México, negociando condiciones óptimas y supervisando la producción.</p>
+          </div>
+          <!-- Tarjeta Logística -->
+          <div class="bg-white p-6 rounded-[15px] shadow text-center">
+            <img src="icon-logistica_small2.png" alt="Icono Logística" class="w-16 h-16 mx-auto mb-4">
+            <h3 class="text-xl font-semibold mb-2">Logística</h3>
+            <p>Coordinamos transporte, aduanas y entrega final con transparencia y eficiencia, reduciendo costos y tiempos.</p>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
   <!-- Sección del proceso con flechas -->
-  <section class="py-12" id="proceso">
+  <section id="proceso" class="py-12">
     <div class="container mx-auto px-4">
-      <h2 class="text-3xl font-bold text-center mb-8">Nuestro Proceso</h2>
-      <div class="flex flex-col md:flex-row items-center justify-center space-y-6 md:space-y-0 md:space-x-4">
-        <div class="bg-white p-6 rounded-lg shadow text-center w-64">
-          <h4 class="font-semibold mb-2">1. Consulta</h4>
-          <p>Definimos tus requerimientos y objetivos.</p>
-        </div>
-        <span class="hidden md:block text-4xl text-blue-600">→</span>
-        <div class="bg-white p-6 rounded-lg shadow text-center w-64">
-          <h4 class="font-semibold mb-2">2. Negociación</h4>
-          <p>Seleccionamos proveedores y negociamos condiciones.</p>
-        </div>
-        <span class="hidden md:block text-4xl text-blue-600">→</span>
-        <div class="bg-white p-6 rounded-lg shadow text-center w-64">
-          <h4 class="font-semibold mb-2">3. Producción</h4>
-          <p>Supervisamos la fabricación y control de calidad.</p>
-        </div>
-        <span class="hidden md:block text-4xl text-blue-600">→</span>
-        <div class="bg-white p-6 rounded-lg shadow text-center w-64">
-          <h4 class="font-semibold mb-2">4. Entrega</h4>
-          <p>Coordinamos el envío, despacho aduanal y entrega final.</p>
+      <div class="p-6 rounded-[15px]" style="background: linear-gradient(to right, #F8B03B 10%, #ffffff 10%);">
+        <h2 class="text-3xl font-bold text-center mb-8">Nuestro Proceso</h2>
+        <div class="flex flex-col md:flex-row items-center justify-center space-y-6 md:space-y-0 md:space-x-4">
+          <div class="bg-white p-6 rounded-[15px] shadow text-center w-64">
+            <h4 class="font-semibold mb-2">1. Consulta</h4>
+            <p>Definimos tus requerimientos y objetivos.</p>
+          </div>
+          <span class="hidden md:block text-4xl text-blue-600">→</span>
+          <div class="bg-white p-6 rounded-[15px] shadow text-center w-64">
+            <h4 class="font-semibold mb-2">2. Negociación</h4>
+            <p>Seleccionamos proveedores y negociamos condiciones.</p>
+          </div>
+          <span class="hidden md:block text-4xl text-blue-600">→</span>
+          <div class="bg-white p-6 rounded-[15px] shadow text-center w-64">
+            <h4 class="font-semibold mb-2">3. Producción</h4>
+            <p>Supervisamos la fabricación y control de calidad.</p>
+          </div>
+          <span class="hidden md:block text-4xl text-blue-600">→</span>
+          <div class="bg-white p-6 rounded-[15px] shadow text-center w-64">
+            <h4 class="font-semibold mb-2">4. Entrega</h4>
+            <p>Coordinamos el envío, despacho aduanal y entrega final.</p>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
   <!-- Sección de industrias con globo -->
-  <section class="py-12 bg-gray-100" id="industrias">
+  <section id="industrias" class="py-12">
     <div class="container mx-auto px-4">
-      <h2 class="text-3xl font-bold text-center mb-8">Industrias</h2>
-      <div class="relative max-w-xl mx-auto">
-        <img src="globo-industries_small2.png" alt="Globo con industrias" class="w-full h-auto rounded-lg shadow">
-        <!-- Etiquetas sobre el globo -->
-        <div class="absolute top-4 left-4 bg-white bg-opacity-80 px-3 py-1 rounded shadow">
-          <h3 class="text-lg font-semibold">Automotriz</h3>
-        </div>
-        <div class="absolute top-4 right-4 bg-white bg-opacity-80 px-3 py-1 rounded shadow">
-          <h3 class="text-lg font-semibold">Tecnología</h3>
-        </div>
-        <div class="absolute bottom-4 left-1/2 transform -translate-x-1/2 bg-white bg-opacity-80 px-3 py-1 rounded shadow">
-          <h3 class="text-lg font-semibold">Consumo Masivo</h3>
+      <div class="p-6 rounded-[15px]" style="background: linear-gradient(to right, #F8B03B 10%, #ffffff 10%);">
+        <h2 class="text-3xl font-bold text-center mb-8">Industrias</h2>
+        <div class="relative max-w-xl mx-auto">
+          <img src="globo-industries_small2.png" alt="Globo con industrias" class="w-full h-auto rounded-lg shadow">
+          <!-- Etiquetas sobre el globo -->
+          <div class="absolute top-4 left-4 bg-white bg-opacity-80 px-3 py-1 rounded shadow">
+            <h3 class="text-lg font-semibold">Automotriz</h3>
+          </div>
+          <div class="absolute top-4 right-4 bg-white bg-opacity-80 px-3 py-1 rounded shadow">
+            <h3 class="text-lg font-semibold">Tecnología</h3>
+          </div>
+          <div class="absolute bottom-4 left-1/2 transform -translate-x-1/2 bg-white bg-opacity-80 px-3 py-1 rounded shadow">
+            <h3 class="text-lg font-semibold">Consumo Masivo</h3>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
   <!-- Sección de casos de éxito -->
-  <section class="py-12" id="casos">
+  <section id="casos" class="py-12">
     <div class="container mx-auto px-4">
-      <h2 class="text-3xl font-bold text-center mb-8">Casos de Éxito</h2>
-      <div class="grid md:grid-cols-3 gap-8">
-        <div class="bg-white p-6 rounded-lg shadow">
-          <h3 class="text-xl font-semibold mb-2">Caso 1</h3>
-          <p>Descripción breve del logro obtenido para un cliente satisfecho.</p>
-        </div>
-        <div class="bg-white p-6 rounded-lg shadow">
-          <h3 class="text-xl font-semibold mb-2">Caso 2</h3>
-          <p>Descripción breve de otro proyecto exitoso.</p>
-        </div>
-        <div class="bg-white p-6 rounded-lg shadow">
-          <h3 class="text-xl font-semibold mb-2">Caso 3</h3>
-          <p>Descripción breve de un tercer caso de éxito.</p>
+      <div class="p-6 rounded-[15px]" style="background: linear-gradient(to right, #F8B03B 10%, #ffffff 10%);">
+        <h2 class="text-3xl font-bold text-center mb-8">Casos de Éxito</h2>
+        <div class="grid md:grid-cols-3 gap-8">
+          <div class="bg-white p-6 rounded-[15px] shadow">
+            <h3 class="text-xl font-semibold mb-2">Caso 1</h3>
+            <p>Descripción breve del logro obtenido para un cliente satisfecho.</p>
+          </div>
+          <div class="bg-white p-6 rounded-[15px] shadow">
+            <h3 class="text-xl font-semibold mb-2">Caso 2</h3>
+            <p>Descripción breve de otro proyecto exitoso.</p>
+          </div>
+          <div class="bg-white p-6 rounded-[15px] shadow">
+            <h3 class="text-xl font-semibold mb-2">Caso 3</h3>
+            <p>Descripción breve de un tercer caso de éxito.</p>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
   <!-- Sección de contacto -->
-  <section class="py-12 bg-gray-100" id="contacto">
+  <section id="contacto" class="py-12">
     <div class="container mx-auto px-4 text-center">
-      <h2 class="text-3xl font-bold mb-4">Contáctanos</h2>
-      <p class="text-lg mb-6">Estamos listos para ayudarte con tus necesidades de importación y sourcing desde China.</p>
-      <a href="mailto:CTA_EMAIL" class="bg-blue-500 text-white px-6 py-3 rounded-lg shadow hover:bg-blue-600">Enviar correo</a>
+      <div class="p-6 rounded-[15px] mx-auto max-w-2xl" style="background: linear-gradient(to right, #F8B03B 10%, #ffffff 10%);">
+        <h2 class="text-3xl font-bold mb-4">Contáctanos</h2>
+        <p class="text-lg mb-6">Estamos listos para ayudarte con tus necesidades de importación y sourcing desde China.</p>
+        <a href="mailto:CTA_EMAIL" class="bg-blue-500 text-white px-6 py-3 rounded-lg shadow hover:bg-blue-600">Enviar correo</a>
+      </div>
     </div>
   </section>
 
   <!-- Pie de página -->
-  <footer class="bg-white py-6">
+  <footer class="py-6">
     <div class="container mx-auto px-4 text-center text-sm text-gray-500">
       &copy; <script>document.write(new Date().getFullYear());</script> AVOKES. Todos los derechos reservados.
     </div>
