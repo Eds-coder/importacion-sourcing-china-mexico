@@ -4,27 +4,67 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>AVOKES - Importación y Sourcing</title>
+  <!-- Cargar Tailwind CSS -->
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <!-- Icono de la página (favicon) usando el imagotipo -->
+  <link rel="icon" type="image/png" href="avokes-imagotipo.png">
+  <!-- Script para el carrusel simple -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const track = document.getElementById('carousel-track');
+      if (!track) return;
+      const slides = track.children.length;
+      let index = 0;
+      setInterval(() => {
+        index = (index + 1) % slides;
+        track.style.transform = `translateX(-${index * 100}%)`;
+      }, 5000);
+    });
+  </script>
 </head>
-<body class="bg-gray-50 text-gray-800">
+<!-- Apply a vertical gradient as the page background -->
+<body class="text-gray-800" style="background: linear-gradient(to bottom, #2D7D89, #67C2D1);">
   <!-- Barra de navegación fija -->
   <nav class="fixed top-0 left-0 right-0 bg-white shadow z-50">
-    <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+    <div class="container mx-auto px-4 py-4 flex items-center justify-between">
+      <!-- Logo e imagotipo a la izquierda -->
+      <a href="#" class="flex items-center space-x-2">
+        <img src="avokes-imagotipo.png" alt="AVOKES logo" class="h-12 w-12 sm:h-16 sm:w-16">
+        <span class="font-bold text-lg sm:text-2xl text-gray-800">AVOKES</span>
+      </a>
       <!-- Enlaces de navegación -->
-      <div class="flex space-x-6 text-sm md:text-base">
+      <div class="flex space-x-4 md:space-x-6 text-sm md:text-base">
         <a href="#nosotros" class="text-gray-800 hover:text-blue-600">Nosotros</a>
         <a href="#viaja" class="text-gray-800 hover:text-blue-600">Viaja</a>
         <a href="#blog" class="text-gray-800 hover:text-blue-600">Blog</a>
         <a href="#ecommerce" class="text-gray-800 hover:text-blue-600">E-commerce</a>
       </div>
-      <!-- Logo a la derecha -->
-      <img src="logo.png" alt="Logo AVOKES" class="h-10">
     </div>
   </nav>
 
+  <!-- Añadir relleno superior para compensar la barra fija -->
+  <div class="pt-24"></div>
+
+  <!-- Sección del carrusel de imágenes con enlaces -->
+  <section class="mb-12">
+    <div class="relative w-full h-64 overflow-hidden">
+      <div id="carousel-track" class="flex transition-transform duration-700 ease-in-out h-full">
+        <div class="w-full flex-shrink-0">
+          <a href="#"><img src="carousel1.png" alt="Buque de carga 1" class="w-full h-64 object-cover"></a>
+        </div>
+        <div class="w-full flex-shrink-0">
+          <a href="#"><img src="carousel2.png" alt="Buque de carga 2" class="w-full h-64 object-cover"></a>
+        </div>
+        <div class="w-full flex-shrink-0">
+          <a href="#"><img src="carousel3.png" alt="Buque de carga 3" class="w-full h-64 object-cover"></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- Hero principal con nombre de la empresa y tagline -->
-  <header class="bg-white pt-24">
-    <div class="container mx-auto px-4 py-12 text-center">
+  <header class="bg-white py-12" id="inicio">
+    <div class="container mx-auto px-4 text-center">
       <h1 class="text-4xl md:text-5xl font-bold mb-4">AVOKES</h1>
       <p class="text-lg md:text-xl text-gray-600 mb-6">Ten control de tus proveedores en Asia</p>
       <div class="flex justify-center gap-4">
@@ -34,40 +74,8 @@
     </div>
   </header>
 
-  <!-- Carrusel de imágenes -->
-  <section class="py-8" id="viaja">
-    <div class="container mx-auto px-4">
-      <div class="overflow-hidden relative rounded-lg shadow">
-        <div id="carousel" class="flex w-full transition-transform duration-700">
-          <a href="#" class="flex-shrink-0 w-full">
-            <img src="carousel1.png" alt="Buque de carga 1" class="w-full h-64 md:h-96 object-cover">
-          </a>
-          <a href="#" class="flex-shrink-0 w-full">
-            <img src="carousel2.png" alt="Buque de carga 2" class="w-full h-64 md:h-96 object-cover">
-          </a>
-          <a href="#" class="flex-shrink-0 w-full">
-            <img src="carousel3.png" alt="Buque de carga 3" class="w-full h-64 md:h-96 object-cover">
-          </a>
-        </div>
-      </div>
-    </div>
-    <script>
-      // Carrusel automático que desplaza las imágenes horizontalmente cada 4 segundos
-      (function() {
-        const carousel = document.getElementById('carousel');
-        if (!carousel) return;
-        const slides = carousel.children.length;
-        let currentIndex = 0;
-        setInterval(() => {
-          currentIndex = (currentIndex + 1) % slides;
-          carousel.style.transform = `translateX(-${currentIndex * 100}%)`;
-        }, 4000);
-      })();
-    </script>
-  </section>
-
   <!-- Sección de servicios -->
-  <section class="py-12 bg-gray-100" id="nosotros">
+  <section class="py-12 bg-gray-100" id="servicios">
     <div class="container mx-auto px-4">
       <h2 class="text-3xl font-bold text-center mb-8">Nuestros Servicios</h2>
       <div class="grid md:grid-cols-3 gap-8">
@@ -94,7 +102,7 @@
   </section>
 
   <!-- Sección del proceso con flechas -->
-  <section class="py-12">
+  <section class="py-12" id="proceso">
     <div class="container mx-auto px-4">
       <h2 class="text-3xl font-bold text-center mb-8">Nuestro Proceso</h2>
       <div class="flex flex-col md:flex-row items-center justify-center space-y-6 md:space-y-0 md:space-x-4">
@@ -102,17 +110,17 @@
           <h4 class="font-semibold mb-2">1. Consulta</h4>
           <p>Definimos tus requerimientos y objetivos.</p>
         </div>
-        <img src="arrow_small.png" alt="Flecha" class="w-16 h-8 hidden md:block">
+        <span class="hidden md:block text-4xl text-blue-600">→</span>
         <div class="bg-white p-6 rounded-lg shadow text-center w-64">
-          <h4 class="font-semibold mb-2">2. Cotización</h4>
-          <p>Te presentamos un plan de acción con costos y tiempos estimados.</p>
+          <h4 class="font-semibold mb-2">2. Negociación</h4>
+          <p>Seleccionamos proveedores y negociamos condiciones.</p>
         </div>
-        <img src="arrow_small.png" alt="Flecha" class="w-16 h-8 hidden md:block">
+        <span class="hidden md:block text-4xl text-blue-600">→</span>
         <div class="bg-white p-6 rounded-lg shadow text-center w-64">
           <h4 class="font-semibold mb-2">3. Producción</h4>
           <p>Supervisamos la fabricación y control de calidad.</p>
         </div>
-        <img src="arrow_small.png" alt="Flecha" class="w-16 h-8 hidden md:block">
+        <span class="hidden md:block text-4xl text-blue-600">→</span>
         <div class="bg-white p-6 rounded-lg shadow text-center w-64">
           <h4 class="font-semibold mb-2">4. Entrega</h4>
           <p>Coordinamos el envío, despacho aduanal y entrega final.</p>
@@ -122,7 +130,7 @@
   </section>
 
   <!-- Sección de industrias con globo -->
-  <section class="py-12 bg-gray-100">
+  <section class="py-12 bg-gray-100" id="industrias">
     <div class="container mx-auto px-4">
       <h2 class="text-3xl font-bold text-center mb-8">Industrias</h2>
       <div class="relative max-w-xl mx-auto">
@@ -142,7 +150,7 @@
   </section>
 
   <!-- Sección de casos de éxito -->
-  <section class="py-12">
+  <section class="py-12" id="casos">
     <div class="container mx-auto px-4">
       <h2 class="text-3xl font-bold text-center mb-8">Casos de Éxito</h2>
       <div class="grid md:grid-cols-3 gap-8">
@@ -163,7 +171,7 @@
   </section>
 
   <!-- Sección de contacto -->
-  <section class="py-12 bg-gray-100">
+  <section class="py-12 bg-gray-100" id="contacto">
     <div class="container mx-auto px-4 text-center">
       <h2 class="text-3xl font-bold mb-4">Contáctanos</h2>
       <p class="text-lg mb-6">Estamos listos para ayudarte con tus necesidades de importación y sourcing desde China.</p>
@@ -171,6 +179,7 @@
     </div>
   </section>
 
+  <!-- Pie de página -->
   <footer class="bg-white py-6">
     <div class="container mx-auto px-4 text-center text-sm text-gray-500">
       &copy; <script>document.write(new Date().getFullYear());</script> AVOKES. Todos los derechos reservados.
