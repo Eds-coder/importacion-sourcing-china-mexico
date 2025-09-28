@@ -34,6 +34,17 @@
     .card-gradient {
       background-color: #FFFBF5;
     }
+
+    /* Carousel container with 16:9 aspect ratio */
+    .carousel-16by9 {
+      aspect-ratio: 16 / 9;
+    }
+
+    /* Add horizontal spacing of 5% to each section */
+    .section-spacing {
+      padding-left: 5%;
+      padding-right: 5%;
+    }
   </style>
 </head>
 <body class="text-gray-800">
@@ -48,7 +59,7 @@
       <!-- Enlaces de navegación -->
       <div class="flex space-x-4 md:space-x-6 text-sm md:text-base">
         <a href="#nosotros" class="text-white hover:text-yellow-300">Nosotros</a>
-        <a href="#viaja" class="text-white hover:text-yellow-300">Viaja</a>
+        <a href="#inicio" class="text-white hover:text-yellow-300">Viaja</a>
         <a href="#blog" class="text-white hover:text-yellow-300">Blog</a>
         <a href="#ecommerce" class="text-white hover:text-yellow-300">E-commerce</a>
       </div>
@@ -58,12 +69,26 @@
   <!-- Relleno superior para compensar la barra fija -->
   <div class="pt-24"></div>
 
-  <!-- Sección del hero -->
-  <section id="inicio" class="py-12">
+  <!-- Sección del hero y carrusel -->
+  <section id="inicio" class="py-12 section-spacing">
     <div class="container mx-auto px-4">
-      <div class="p-6 rounded-[15px] card-gradient">
+      <div class="p-6 rounded-[15px] card-gradient text-center">
         <h1 class="text-4xl md:text-5xl font-bold mb-4">AVOKES</h1>
         <p class="text-lg md:text-xl text-gray-600 mb-6">Ten control de tus proveedores en Asia</p>
+        <!-- Carrusel integrado -->
+        <div class="relative w-full carousel-16by9 overflow-hidden rounded-lg mb-6">
+          <div id="carousel-track" class="flex transition-transform duration-700 ease-in-out h-full">
+            <div class="w-full flex-shrink-0">
+              <a href="#"><img src="carousel1.png" alt="Buque de carga 1" class="w-full h-full object-cover rounded-lg"></a>
+            </div>
+            <div class="w-full flex-shrink-0">
+              <a href="#"><img src="carousel2.png" alt="Buque de carga 2" class="w-full h-full object-cover rounded-lg"></a>
+            </div>
+            <div class="w-full flex-shrink-0">
+              <a href="#"><img src="carousel3.png" alt="Buque de carga 3" class="w-full h-full object-cover rounded-lg"></a>
+            </div>
+          </div>
+        </div>
         <div class="flex justify-center gap-4">
           <a href="https://wa.me/CTA_WHATSAPP" class="bg-green-500 text-white px-6 py-3 rounded-lg shadow hover:bg-green-600">WhatsApp</a>
           <a href="mailto:CTA_EMAIL" class="bg-blue-500 text-white px-6 py-3 rounded-lg shadow hover:bg-blue-600">Contáctanos</a>
@@ -72,29 +97,10 @@
     </div>
   </section>
 
-  <!-- Sección del carrusel de imágenes con enlaces -->
-  <section id="viaja" class="pb-12">
-    <div class="container mx-auto px-4">
-      <div class="p-6 rounded-[15px] card-gradient">
-        <div class="relative w-full h-64 overflow-hidden rounded-lg">
-          <div id="carousel-track" class="flex transition-transform duration-700 ease-in-out h-full">
-            <div class="w-full flex-shrink-0">
-              <a href="#"><img src="carousel1.png" alt="Buque de carga 1" class="w-full h-64 object-cover rounded-lg"></a>
-            </div>
-            <div class="w-full flex-shrink-0">
-              <a href="#"><img src="carousel2.png" alt="Buque de carga 2" class="w-full h-64 object-cover rounded-lg"></a>
-            </div>
-            <div class="w-full flex-shrink-0">
-              <a href="#"><img src="carousel3.png" alt="Buque de carga 3" class="w-full h-64 object-cover rounded-lg"></a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+  <!-- Eliminado: Sección del carrusel independiente, ahora integrado en el hero -->
 
   <!-- Sección de servicios -->
-  <section id="servicios" class="py-12">
+  <section id="servicios" class="py-12 section-spacing">
     <div class="container mx-auto px-4">
       <div class="p-6 rounded-[15px] card-gradient">
         <h2 class="text-3xl font-bold text-center mb-8">Nuestros Servicios</h2>
@@ -123,7 +129,7 @@
   </section>
 
   <!-- Sección del proceso con flechas -->
-  <section id="proceso" class="py-12">
+  <section id="proceso" class="py-12 section-spacing">
     <div class="container mx-auto px-4">
       <div class="p-6 rounded-[15px] card-gradient">
         <h2 class="text-3xl font-bold text-center mb-8">Nuestro Proceso</h2>
@@ -153,7 +159,7 @@
   </section>
 
   <!-- Sección de industrias con globo -->
-  <section id="industrias" class="py-12">
+  <section id="industrias" class="py-12 section-spacing">
     <div class="container mx-auto px-4">
       <div class="p-6 rounded-[15px] card-gradient">
         <h2 class="text-3xl font-bold text-center mb-8">Industrias</h2>
@@ -175,7 +181,7 @@
   </section>
 
   <!-- Sección de casos de éxito -->
-  <section id="casos" class="py-12">
+  <section id="casos" class="py-12 section-spacing">
     <div class="container mx-auto px-4">
       <div class="p-6 rounded-[15px] card-gradient">
         <h2 class="text-3xl font-bold text-center mb-8">Casos de Éxito</h2>
@@ -198,7 +204,7 @@
   </section>
 
   <!-- Sección de contacto -->
-  <section id="contacto" class="py-12">
+  <section id="contacto" class="py-12 section-spacing">
     <div class="container mx-auto px-4 text-center">
       <div class="p-6 rounded-[15px] mx-auto max-w-2xl card-gradient">
         <h2 class="text-3xl font-bold mb-4">Contáctanos</h2>
