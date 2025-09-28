@@ -45,23 +45,32 @@
       padding-left: 5%;
       padding-right: 5%;
     }
+    /* Wrapper for carousel: reduce width to 70% on larger screens and center; full width on small screens */
+    .carousel-wrapper {
+      width: 70%;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    @media (max-width: 768px) {
+      .carousel-wrapper {
+        width: 100%;
+      }
+    }
   </style>
 </head>
 <body class="text-gray-800">
   <!-- Barra de navegación con degradado -->
   <nav class="fixed top-0 left-0 right-0 shadow z-50 nav-gradient">
-    <div class="container mx-auto px-4 py-4 flex items-center justify-between">
-      <!-- Logo e imagotipo a la izquierda -->
-      <a href="#" class="flex items-center space-x-2">
-        <img src="avokes-imagotipo.png" alt="AVOKES logo" class="h-12 w-12 sm:h-16 sm:w-16">
-        <span class="font-bold text-lg sm:text-2xl text-white">AVOKES</span>
-      </a>
-      <!-- Enlaces de navegación -->
-      <div class="flex space-x-4 md:space-x-6 text-sm md:text-base">
-        <a href="#nosotros" class="text-white hover:text-yellow-300">Nosotros</a>
-        <a href="#inicio" class="text-white hover:text-yellow-300">Viaja</a>
-        <a href="#blog" class="text-white hover:text-yellow-300">Blog</a>
-        <a href="#ecommerce" class="text-white hover:text-yellow-300">E-commerce</a>
+    <div class="container mx-auto px-4 py-4 flex justify-center">
+      <div class="flex items-center space-x-8 text-sm md:text-base">
+        <a href="#" class="flex items-center space-x-2">
+          <img src="avokes-imagotipo.png" alt="AVOKES logo" class="h-12 w-12 sm:h-16 sm:w-16">
+          <span class="font-extrabold text-lg sm:text-2xl text-white uppercase">AVOKES</span>
+        </a>
+        <a href="#nosotros" class="text-white uppercase font-bold hover:text-yellow-300">NOSOTROS</a>
+        <a href="#inicio" class="text-white uppercase font-bold hover:text-yellow-300">VIAJA</a>
+        <a href="#blog" class="text-white uppercase font-bold hover:text-yellow-300">BLOG</a>
+        <a href="#ecommerce" class="text-white uppercase font-bold hover:text-yellow-300">E-COMMERCE</a>
       </div>
     </div>
   </nav>
@@ -76,7 +85,8 @@
         <h1 class="text-4xl md:text-5xl font-bold mb-4">AVOKES</h1>
         <p class="text-lg md:text-xl text-gray-600 mb-6">Ten control de tus proveedores en Asia</p>
         <!-- Carrusel integrado -->
-        <div class="relative w-full carousel-16by9 overflow-hidden rounded-lg mb-6">
+        <div class="carousel-wrapper">
+          <div class="relative w-full carousel-16by9 overflow-hidden rounded-lg mb-6">
           <div id="carousel-track" class="flex transition-transform duration-700 ease-in-out h-full">
             <div class="w-full flex-shrink-0">
               <a href="#"><img src="carousel1.png" alt="Buque de carga 1" class="w-full h-full object-cover rounded-lg"></a>
@@ -87,6 +97,7 @@
             <div class="w-full flex-shrink-0">
               <a href="#"><img src="carousel3.png" alt="Buque de carga 3" class="w-full h-full object-cover rounded-lg"></a>
             </div>
+          </div>
           </div>
         </div>
         <div class="flex justify-center gap-4">
